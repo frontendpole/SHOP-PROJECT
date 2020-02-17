@@ -1,7 +1,180 @@
+body {
+  font-family: 'Rajdhani', sans-serif;
+}
+
 table {
   border-collapse: collapse;
-  width: 100%;
+  width: 80%;
+  text-align: center;
+  margin: 20px auto;
+  border: 3px solid black;
+  font-size: 18px;
+
+  th {
+    height: 50px;
+    background-color: #138e47;
+    color: white;
+  }
+
   th, td {
-    border: 1px solid #aaaaaa;
+    border: 1px solid black;
+  }
+
+  tr:nth-child(even) {
+      background-color: #f5f5f5;
+  }
+
+  td{
+    font-size: 15px;
+    font-weight: bolder;
+    width: 25%;
+  }
+}
+
+button {
+  outline: none;
+  text-align: center;
+}
+
+.modal-background {
+  background-color: transparentize(lightgray, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 998;
+  display: none;
+
+  &.open {
+    display: block;
+  }
+}
+
+.modal {
+  display: none;
+  z-index: 999;
+  background-color: white;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid black;
+  box-shadow: 20px 20px 10px grey;
+  border-radius: 20px;
+  width: 500px;
+  height: 300px;
+
+  &.open {
+    display: block;
+  }
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  input {
+    margin: 15px auto;
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 15px;
+    outline: none;
+  }
+}
+
+#save-item-button {
+  background: rgb(19, 142, 71);
+  width: 200px;
+  height: 45px;
+  color: white;
+  border-radius: 10px;
+  margin-right: 10px;
+  margin-top: 20px;
+  box-shadow: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  border: 1px solid white;
+
+  &:hover {
+    background-color: white;
+    color: black;
+    border: 5px solid rgb(19, 142, 71);
+  }
+}
+
+#cancel {
+  background: indianred;
+  width: 100px;
+  height: 40px;
+  color: white;
+  border-radius: 10px;
+  margin-right: 10px;
+  box-shadow: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 20px;
+  transform: translate(215%, -10%);
+  border: 1px solid white;
+
+  &:hover {
+    background-color: white;
+    color: black;
+    border: 5px solid indianred;
+  }
+}
+
+#add-product-button {
+  background: rgb(24, 100, 125);
+  width: 200px;
+  height: 45px;
+  color: white;
+  border-radius: 10px;
+  margin-right: 10px;
+  box-shadow: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 50vw;
+  transform: translateX(-50%);
+  border: 1px solid white;
+
+  &:hover {
+    background-color: white;
+    color: black;
+    border: 5px solid rgb(24, 100, 125);
+  }
+}
+
+.delete-button {
+  background-color: indianred;
+  width: 70px;
+  height: 35px;
+  color: white;
+  border-radius: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 5px auto;
+  border: 1px solid white;
+
+  &:hover {
+    background-color: white;
+    color: black;
+    border: 5px solid indianred;
   }
 }

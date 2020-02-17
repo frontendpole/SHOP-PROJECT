@@ -25,11 +25,17 @@ gulp.task('copy-js:watch', () => {
     gulp.watch('./src/js/*.js', gulp.parallel('copy-js'));
 });
 
-gulp.task('watch', gulp.parallel('sass:watch', 'copy-js:watch'));
 
 gulp.task('copy-html', () => {
     return gulp.src('./src/*.html')
         .pipe(gulp.dest('./dist'));
 });
+
+gulp.task('copy-html:watch', () => {
+    gulp.watch('./src/*.html', gulp.parallel('copy-html'));
+});
+
+gulp.task('watch', gulp.parallel('sass:watch', 'copy-js:watch', 'copy-html:watch'));
+
 
 gulp.task('build', gulp.parallel('sass', 'copy-js', 'copy-html'));

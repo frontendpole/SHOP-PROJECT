@@ -2,20 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sklepik</title>
+    <title>Shop Ola</title>
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani:400,700&display=swap&subset=latin-ext" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
 <table id="user-table">
     <thead>
     <tr>
-        <th>Nazwa</th>
-        <th>Cena</th>
-        <th>Ilość</th>
+        <th>Name of product</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Deletion</th>
     </tr>
     </thead>
     <tbody></tbody>
 </table>
+<div class="modal">
+    <div class="form">
+    <form id="add-item-form">
+    <input type="text" id="name" placeholder="product name" required>
+    <input type="number" id="price" placeholder="product price" required>
+    <input type="number" id="count" placeholder="product quantity" required>
+    </form>
+    <button id="save-item-button">Save product</button>
+    <button id="cancel">Cancel</button>
+    </div>
+</div>
+<button id="add-product-button">Add product</button>
+
+
+
+
+
 <script src="script.js"></script>
 </body>
 </html>
